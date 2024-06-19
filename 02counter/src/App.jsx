@@ -6,17 +6,31 @@ import './App.css'
 function App() {
 
   // returns a variable and a method in an array
-  let [counter, setCounter] = useState(15)  // default value
+  // useState send updates in batches
+  const [counter, setCounter] = useState(15)  // default value
   
   //let counter = 15
 
   const addValue = () => {
     // counter = counter + 1  
     // setCounter(counter)    // automatically updates value
-    if(counter < 20){
-      setCounter(counter + 1)   // can do this too
-    }
+    // if(counter < 20){
+    //   setCounter(counter + 1)   // can do this too
+    // }
     
+    // a batch will be created of these and as these are same
+    // so only it will run only once
+    // setCounter(counter + 1)
+    // setCounter(counter + 1)
+    // setCounter(counter + 1)
+    // setCounter(counter + 1)
+
+    // when we pass like callback it will complete updation
+    // after the completion of all these
+    setCounter(prevCounter => prevCounter + 1)    // taking previous state
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)    
   }
 
   const removeValue = () => {
@@ -32,11 +46,12 @@ function App() {
 
       <button 
       onClick={addValue}
-      >Add value</button>
+      >Add value {counter}</button>
       <br/>
       <button
       onClick={removeValue}
-      >Remove value</button>
+      >Remove value {counter}</button>
+      <p>footer: {counter}</p>
     </>
   )
 }
