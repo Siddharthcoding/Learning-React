@@ -10,3 +10,11 @@
 7. The algo react uses to differentiate the web browser's tree and React's tree formed through create root is called reconciliation.
 8. Reconciliation is the algo behind what popularly known as the Virtual-DOM.
 9. In UI it is not necessary for every update to be applied immediately. */
+
+/* 
+Some hooks:- 
+
+1. use Callback: used for optimization it calls the function inside it when the dependencies are changed and returns a memorized function 
+2. useeffect: runs the function inside it whenever the page renders first-time or dependencies are changed
+3. use ref : used to give reference of selected components in our page so that functions can be performed on referenced values
+*/
