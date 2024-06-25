@@ -28,7 +28,7 @@ function App() {
     <div
         className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
         style={{
-            backgroundImage: `url(https://img.freepik.com/free-photo/panoramic-view-dubai-city-illuminated-neon-spectrum_23-2151305340.jpg?t=st=1719062126~exp=1719065726~hmac=90a28053e8dc9992bc9cfddaa64fd457a16021dca4f4ebcd4f27e4f26d7c5790&w=900)`,
+            backgroundImage: `url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQWHLHX7CBztbQEB-wp6ktwpybQVfBNuMmvw&s)`,
         }}
     >
         <div className="w-full">
